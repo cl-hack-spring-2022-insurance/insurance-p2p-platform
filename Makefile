@@ -40,6 +40,3 @@ mainnet-fork :; npx hardhat node --fork ${ETH_MAINNET_RPC_URL}
 
 # Rename all instances of this repo with the new repo name
 rename :; chmod +x ./scripts/* && ./scripts/rename.sh
-
-# Starts the frontend
-frontend :; cd frontend && yarn start

@@ -1,5 +1,5 @@
 cache/
-out/
+frontend/src/contracts
 node_modules/*
 node_modules
 

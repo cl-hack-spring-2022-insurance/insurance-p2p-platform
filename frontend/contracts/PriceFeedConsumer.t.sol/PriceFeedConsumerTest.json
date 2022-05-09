@@ -1,0 +1,1200 @@
+{
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "name": "log",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "log_address",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "",
+          "type": "bytes"
+        }
+      ],
+      "name": "log_bytes",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "name": "log_bytes32",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "int256",
+          "name": "",
+          "type": "int256"
+        }
+      ],
+      "name": "log_int",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "key",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "val",
+          "type": "address"
+        }
+      ],
+      "name": "log_named_address",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "key",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "val",
+          "type": "bytes"
+        }
+      ],
+      "name": "log_named_bytes",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "key",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes32",
+          "name": "val",
+          "type": "bytes32"
+        }
+      ],
+      "name": "log_named_bytes32",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "key",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "int256",
+          "name": "val",
+          "type": "int256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "decimals",
+          "type": "uint256"
+        }
+      ],
+      "name": "log_named_decimal_int",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "key",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "val",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "decimals",
+          "type": "uint256"
+        }
+      ],
+      "name": "log_named_decimal_uint",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "key",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "int256",
+          "name": "val",
+          "type": "int256"
+        }
+      ],
+      "name": "log_named_int",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "key",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "val",
+          "type": "string"
+        }
+      ],
+      "name": "log_named_string",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "key",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "val",
+          "type": "uint256"
+        }
+      ],
+      "name": "log_named_uint",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "name": "log_string",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "log_uint",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "bytes",
+          "name": "",
+          "type": "bytes"
+        }
+      ],
+      "name": "logs",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "DECIMALS",
+      "outputs": [
+        {
+          "internalType": "uint8",
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "INITIAL_ANSWER",
+      "outputs": [
+        {
+          "internalType": "int256",
+          "name": "",
+          "type": "int256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "IS_TEST",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "failed",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "mockV3Aggregator",
+      "outputs": [
+        {
+          "internalType": "contract MockV3Aggregator",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "priceFeedConsumer",
+      "outputs": [
+        {
+          "internalType": "contract PriceFeedConsumer",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "setUp",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "test_consumer_returns_starting_value",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x60806040526000805460ff1916600117905534801561001d57600080fd5b50610fc28061002d6000396000f3fe608060405234801561001057600080fd5b50600436106100885760003560e01c80632e0f26251161005b5780632e0f262514610106578063b546f01414610120578063ba414fa614610146578063fa7626d41461015e57600080fd5b8063053a58681461008d578063082f8795146100af5780630a9254e4146100f457806327b74cef146100fe575b600080fd5b61009c670de0b6b3a764000081565b6040519081526020015b60405180910390f35b6001546100cf9073ffffffffffffffffffffffffffffffffffffffff1681565b60405173ffffffffffffffffffffffffffffffffffffffff90911681526020016100a6565b6100fc61016b565b005b6100fc61027a565b61010e601281565b60405160ff90911681526020016100a6565b6000546100cf9062010000900473ffffffffffffffffffffffffffffffffffffffff1681565b61014e610324565b60405190151581526020016100a6565b60005461014e9060ff1681565b6012670de0b6b3a76400006040516101829061066f565b60ff90921682526020820152604001604051809103906000f0801580156101ad573d6000803e3d6000fd5b50600180547fffffffffffffffffffffffff00000000000000000000000000000000000000001673ffffffffffffffffffffffffffffffffffffffff9290921691821790556040516101fe9061067c565b73ffffffffffffffffffffffffffffffffffffffff9091168152602001604051809103906000f080158015610237573d6000803e3d6000fd5b50600060026101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550565b60008060029054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16638e15f4736040518163ffffffff1660e01b8152600401602060405180830381865afa1580156102e8573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061030c9190610689565b9050610321670de0b6b3a76400008214610484565b50565b60008054610100900460ff16156103445750600054610100900460ff1690565b6000737109709ecfa91a80626ff3989d68f67f5b1dd12d3b1561047f5760408051737109709ecfa91a80626ff3989d68f67f5b1dd12d602082018190527f6661696c65640000000000000000000000000000000000000000000000000000828401528251808303840181526060830190935260009290916103e9917f667f9d70ca411d70ead50d8d5c22070dafc36ad75f3dcf5e7237b22ade9aecc4916080016106dd565b604080517fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe08184030181529082905261042191610719565b6000604051808303816000865af19150503d806000811461045e576040519150601f19603f3d011682016040523d82523d6000602084013e610463565b606091505b509150508080602001905181019061047b919061072c565b9150505b919050565b80610321577f41304facd9323d75b11bcdd609cb38effffdb05710f7caf0e9b16c6d9d709f506040516104e89060208082526017908201527f4572726f723a20417373657274696f6e204661696c6564000000000000000000604082015260600190565b60405180910390a1610321737109709ecfa91a80626ff3989d68f67f5b1dd12d3b156106415760408051737109709ecfa91a80626ff3989d68f67f5b1dd12d602082018190527f6661696c656400000000000000000000000000000000000000000000000000009282019290925260016060820152600091907f70ca10bbd0dbfd9020a9f4b13402c16cb120705e0d1c0aeab10fa353ae586fc490608001604080517fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe0818403018152908290526105c292916020016106dd565b604080517fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe0818403018152908290526105fa91610719565b6000604051808303816000865af19150503d8060008114610637576040519150601f19603f3d011682016040523d82523d6000602084013e61063c565b606091505b505050505b600080547fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff00ff16610100179055565b6105c88061074f83390190565b61027680610d1783390190565b60006020828403121561069b57600080fd5b5051919050565b6000815160005b818110156106c357602081850181015186830152016106a9565b818111156106d2576000828601525b509290920192915050565b7fffffffff0000000000000000000000000000000000000000000000000000000083168152600061071160048301846106a2565b949350505050565b600061072582846106a2565b9392505050565b60006020828403121561073e57600080fd5b8151801515811461072557600080fdfe608060405234801561001057600080fd5b506040516105c83803806105c883398101604081905261002f916100a4565b6000805460ff191660ff84161790556100478161004e565b5050610101565b60018190554260025560038054906000610067836100d8565b9091555050600380546000908152600460209081526040808320949094558254825260058152838220429081905592548252600690529190912055565b600080604083850312156100b757600080fd5b825160ff811681146100c857600080fd5b6020939093015192949293505050565b60006000198214156100fa57634e487b7160e01b600052601160045260246000fd5b5060010190565b6104b8806101106000396000f3fe608060405234801561001057600080fd5b50600436106100d45760003560e01c80638205bf6a11610081578063b5ab58dc1161005b578063b5ab58dc1461025b578063b633620c1461027b578063feaf968c1461029b57600080fd5b80638205bf6a146101c15780639a6fc8f5146101ca578063a87a20ce1461024857600080fd5b806354fd4d50116100b257806354fd4d5014610171578063668a0f02146101795780637284e4161461018257600080fd5b8063313ce567146100d95780634aa2011f146100fd57806350d25bcd1461015a575b600080fd5b6000546100e69060ff1681565b60405160ff90911681526020015b60405180910390f35b61015861010b36600461033b565b69ffffffffffffffffffff90931660038181556001849055600283905560009182526004602090815260408084209590955581548352600581528483209390935554815260069091522055565b005b61016360015481565b6040519081526020016100f4565b610163600081565b61016360035481565b604080518082018252601f81527f76302e362f74657374732f4d6f636b563341676772656761746f722e736f6c00602082015290516100f49190610374565b61016360025481565b6102116101d83660046103e7565b69ffffffffffffffffffff8116600090815260046020908152604080832054600683528184205460059093529220549293919290918490565b6040805169ffffffffffffffffffff968716815260208101959095528401929092526060830152909116608082015260a0016100f4565b610158610256366004610409565b6102c6565b610163610269366004610409565b60046020526000908152604090205481565b610163610289366004610409565b60056020526000908152604090205481565b6003546000818152600460209081526040808320546006835281842054600590935292205483610211565b600181905542600255600380549060006102df83610422565b9091555050600380546000908152600460209081526040808320949094558254825260058152838220429081905592548252600690529190912055565b803569ffffffffffffffffffff8116811461033657600080fd5b919050565b6000806000806080858703121561035157600080fd5b61035a8561031c565b966020860135965060408601359560600135945092505050565b600060208083528351808285015260005b818110156103a157858101830151858201604001528201610385565b818111156103b3576000604083870101525b50601f017fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe016929092016040019392505050565b6000602082840312156103f957600080fd5b6104028261031c565b9392505050565b60006020828403121561041b57600080fd5b5035919050565b60007fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff82141561047b577f4e487b7100000000000000000000000000000000000000000000000000000000600052601160045260246000fd5b506001019056fea2646970667358221220f858303fe092c00c2bcd0d813988555a7d6552e273d9e7b0d351c1747b7ebf6564736f6c634300080b003360a060405234801561001057600080fd5b5060405161027638038061027683398101604081905261002f91610040565b6001600160a01b0316608052610070565b60006020828403121561005257600080fd5b81516001600160a01b038116811461006957600080fd5b9392505050565b6080516101e6610090600039600081816070015260a501526101e66000f3fe608060405234801561001057600080fd5b50600436106100365760003560e01c80638e15f4731461003b5780639e87a5cd14610056575b600080fd5b61004361009a565b6040519081526020015b60405180910390f35b60405173ffffffffffffffffffffffffffffffffffffffff7f000000000000000000000000000000000000000000000000000000000000000016815260200161004d565b6000806000806000807f000000000000000000000000000000000000000000000000000000000000000073ffffffffffffffffffffffffffffffffffffffff1663feaf968c6040518163ffffffff1660e01b815260040160a060405180830381865afa15801561010e573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906101329190610160565b50919998505050505050505050565b805169ffffffffffffffffffff8116811461015b57600080fd5b919050565b600080600080600060a0868803121561017857600080fd5b61018186610141565b94506020860151935060408601519250606086015191506101a460808701610141565b9050929550929590935056fea26469706673582212201633b582c2a3e812ef6b0f6af30b9fcc9add11c955aca7b1e3bbd2118e959b0664736f6c634300080b0033a2646970667358221220cd79fc2146909fbc8897c23b35536a0e613a01071996fab02598ac7f1a9937b364736f6c634300080b0033",
+    "sourceMap": "160:597:26:-:0;;;1572:26:16;;;-1:-1:-1;;1572:26:16;1594:4;1572:26;;;160:597:26;;;;;;;;;;;;;;;;",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x608060405234801561001057600080fd5b50600436106100885760003560e01c80632e0f26251161005b5780632e0f262514610106578063b546f01414610120578063ba414fa614610146578063fa7626d41461015e57600080fd5b8063053a58681461008d578063082f8795146100af5780630a9254e4146100f457806327b74cef146100fe575b600080fd5b61009c670de0b6b3a764000081565b6040519081526020015b60405180910390f35b6001546100cf9073ffffffffffffffffffffffffffffffffffffffff1681565b60405173ffffffffffffffffffffffffffffffffffffffff90911681526020016100a6565b6100fc61016b565b005b6100fc61027a565b61010e601281565b60405160ff90911681526020016100a6565b6000546100cf9062010000900473ffffffffffffffffffffffffffffffffffffffff1681565b61014e610324565b60405190151581526020016100a6565b60005461014e9060ff1681565b6012670de0b6b3a76400006040516101829061066f565b60ff90921682526020820152604001604051809103906000f0801580156101ad573d6000803e3d6000fd5b50600180547fffffffffffffffffffffffff00000000000000000000000000000000000000001673ffffffffffffffffffffffffffffffffffffffff9290921691821790556040516101fe9061067c565b73ffffffffffffffffffffffffffffffffffffffff9091168152602001604051809103906000f080158015610237573d6000803e3d6000fd5b50600060026101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550565b60008060029054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16638e15f4736040518163ffffffff1660e01b8152600401602060405180830381865afa1580156102e8573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061030c9190610689565b9050610321670de0b6b3a76400008214610484565b50565b60008054610100900460ff16156103445750600054610100900460ff1690565b6000737109709ecfa91a80626ff3989d68f67f5b1dd12d3b1561047f5760408051737109709ecfa91a80626ff3989d68f67f5b1dd12d602082018190527f6661696c65640000000000000000000000000000000000000000000000000000828401528251808303840181526060830190935260009290916103e9917f667f9d70ca411d70ead50d8d5c22070dafc36ad75f3dcf5e7237b22ade9aecc4916080016106dd565b604080517fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe08184030181529082905261042191610719565b6000604051808303816000865af19150503d806000811461045e576040519150601f19603f3d011682016040523d82523d6000602084013e610463565b606091505b509150508080602001905181019061047b919061072c565b9150505b919050565b80610321577f41304facd9323d75b11bcdd609cb38effffdb05710f7caf0e9b16c6d9d709f506040516104e89060208082526017908201527f4572726f723a20417373657274696f6e204661696c6564000000000000000000604082015260600190565b60405180910390a1610321737109709ecfa91a80626ff3989d68f67f5b1dd12d3b156106415760408051737109709ecfa91a80626ff3989d68f67f5b1dd12d602082018190527f6661696c656400000000000000000000000000000000000000000000000000009282019290925260016060820152600091907f70ca10bbd0dbfd9020a9f4b13402c16cb120705e0d1c0aeab10fa353ae586fc490608001604080517fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe0818403018152908290526105c292916020016106dd565b604080517fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe0818403018152908290526105fa91610719565b6000604051808303816000865af19150503d8060008114610637576040519150601f19603f3d011682016040523d82523d6000602084013e61063c565b606091505b505050505b600080547fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff00ff16610100179055565b6105c88061074f83390190565b61027680610d1783390190565b60006020828403121561069b57600080fd5b5051919050565b6000815160005b818110156106c357602081850181015186830152016106a9565b818111156106d2576000828601525b509290920192915050565b7fffffffff0000000000000000000000000000000000000000000000000000000083168152600061071160048301846106a2565b949350505050565b600061072582846106a2565b9392505050565b60006020828403121561073e57600080fd5b8151801515811461072557600080fdfe608060405234801561001057600080fd5b506040516105c83803806105c883398101604081905261002f916100a4565b6000805460ff191660ff84161790556100478161004e565b5050610101565b60018190554260025560038054906000610067836100d8565b9091555050600380546000908152600460209081526040808320949094558254825260058152838220429081905592548252600690529190912055565b600080604083850312156100b757600080fd5b825160ff811681146100c857600080fd5b6020939093015192949293505050565b60006000198214156100fa57634e487b7160e01b600052601160045260246000fd5b5060010190565b6104b8806101106000396000f3fe608060405234801561001057600080fd5b50600436106100d45760003560e01c80638205bf6a11610081578063b5ab58dc1161005b578063b5ab58dc1461025b578063b633620c1461027b578063feaf968c1461029b57600080fd5b80638205bf6a146101c15780639a6fc8f5146101ca578063a87a20ce1461024857600080fd5b806354fd4d50116100b257806354fd4d5014610171578063668a0f02146101795780637284e4161461018257600080fd5b8063313ce567146100d95780634aa2011f146100fd57806350d25bcd1461015a575b600080fd5b6000546100e69060ff1681565b60405160ff90911681526020015b60405180910390f35b61015861010b36600461033b565b69ffffffffffffffffffff90931660038181556001849055600283905560009182526004602090815260408084209590955581548352600581528483209390935554815260069091522055565b005b61016360015481565b6040519081526020016100f4565b610163600081565b61016360035481565b604080518082018252601f81527f76302e362f74657374732f4d6f636b563341676772656761746f722e736f6c00602082015290516100f49190610374565b61016360025481565b6102116101d83660046103e7565b69ffffffffffffffffffff8116600090815260046020908152604080832054600683528184205460059093529220549293919290918490565b6040805169ffffffffffffffffffff968716815260208101959095528401929092526060830152909116608082015260a0016100f4565b610158610256366004610409565b6102c6565b610163610269366004610409565b60046020526000908152604090205481565b610163610289366004610409565b60056020526000908152604090205481565b6003546000818152600460209081526040808320546006835281842054600590935292205483610211565b600181905542600255600380549060006102df83610422565b9091555050600380546000908152600460209081526040808320949094558254825260058152838220429081905592548252600690529190912055565b803569ffffffffffffffffffff8116811461033657600080fd5b919050565b6000806000806080858703121561035157600080fd5b61035a8561031c565b966020860135965060408601359560600135945092505050565b600060208083528351808285015260005b818110156103a157858101830151858201604001528201610385565b818111156103b3576000604083870101525b50601f017fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffe016929092016040019392505050565b6000602082840312156103f957600080fd5b6104028261031c565b9392505050565b60006020828403121561041b57600080fd5b5035919050565b60007fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff82141561047b577f4e487b7100000000000000000000000000000000000000000000000000000000600052601160045260246000fd5b506001019056fea2646970667358221220f858303fe092c00c2bcd0d813988555a7d6552e273d9e7b0d351c1747b7ebf6564736f6c634300080b003360a060405234801561001057600080fd5b5060405161027638038061027683398101604081905261002f91610040565b6001600160a01b0316608052610070565b60006020828403121561005257600080fd5b81516001600160a01b038116811461006957600080fd5b9392505050565b6080516101e6610090600039600081816070015260a501526101e66000f3fe608060405234801561001057600080fd5b50600436106100365760003560e01c80638e15f4731461003b5780639e87a5cd14610056575b600080fd5b61004361009a565b6040519081526020015b60405180910390f35b60405173ffffffffffffffffffffffffffffffffffffffff7f000000000000000000000000000000000000000000000000000000000000000016815260200161004d565b6000806000806000807f000000000000000000000000000000000000000000000000000000000000000073ffffffffffffffffffffffffffffffffffffffff1663feaf968c6040518163ffffffff1660e01b815260040160a060405180830381865afa15801561010e573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906101329190610160565b50919998505050505050505050565b805169ffffffffffffffffffff8116811461015b57600080fd5b919050565b600080600080600060a0868803121561017857600080fd5b61018186610141565b94506020860151935060408601519250606086015191506101a460808701610141565b9050929550929590935056fea26469706673582212201633b582c2a3e812ef6b0f6af30b9fcc9add11c955aca7b1e3bbd2118e959b0664736f6c634300080b0033a2646970667358221220cd79fc2146909fbc8897c23b35536a0e613a01071996fab02598ac7f1a9937b364736f6c634300080b0033",
+    "sourceMap": "160:597:26:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;248:50;;288:10;248:50;;;;;158:25:33;;;146:2;131:18;248:50:26;;;;;;;;352:40;;;;;;;;;;;;396:42:33;384:55;;;366:74;;354:2;339:18;352:40:26;194:252:33;399:184:26;;;:::i;:::-;;589:166;;;:::i;207:35::-;;240:2;207:35;;;;;623:4:33;611:17;;;593:36;;581:2;566:18;207:35:26;451:184:33;304:42:26;;;;;;;;;;;;1819:584:16;;;:::i;:::-;;;1063:14:33;;1056:22;1038:41;;1026:2;1011:18;1819:584:16;898:187:33;1572:26:16;;;;;;;;;399:184:26;240:2;288:10;452:46;;;;;:::i;:::-;1288:4:33;1276:17;;;1258:36;;1325:2;1310:18;;1303:34;1246:2;1231:18;452:46:26;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;433:16:26;:65;;;;;;;;;;;;;;528:48;;;;;:::i;:::-;396:42:33;384:55;;;366:74;;354:2;339:18;528:48:26;;;;;;;;;;;;;;;;;;;;;;;508:17;;:68;;;;;;;;;;;;;;;;;;399:184::o;589:166::-;654:12;669:17;;;;;;;;;;;:32;;;:34;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;654:49;;713:35;288:10;724:5;:23;713:10;:35::i;:::-;644:111;589:166::o;1819:584:16:-;1853:4;1873:7;;;;;;;1869:528;;;-1:-1:-1;1903:7:16;;;;;;;;1819:584::o;1869:528::-;1941:17;2990:42;2978:55;3059:16;1980:374;;2196:43;;;1671:64;2196:43;;;1941:74:33;;;2221:17:16;2031:18:33;;;2024:34;2196:43:16;;;;;;;;;1914:18:33;;;2196:43:16;;;-1:-1:-1;;1671:64:16;;2086:175;;2135:34;;2086:175;;;:::i;:::-;;;;;;;;;;;;;;;2047:232;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2020:259;;;2323:7;2312:27;;;;;;;;;;;;:::i;:::-;2297:42;;2002:352;1980:374;2374:12;1819:584;-1:-1:-1;1819:584:16:o;3255:157::-;3315:9;3310:96;;3345:30;;;;;3417:2:33;3399:21;;;3456:2;3436:18;;;3429:30;3495:25;3490:2;3475:18;;3468:53;3553:2;3538:18;;3215:347;3345:30:16;;;;;;;;3389:6;2990:42;2978:55;3059:16;2445:359;;2645:67;;;1671:64;2645:67;;;3769:74:33;;;2670:17:16;3859:18:33;;;3852:34;;;;2705:4:16;3902:18:33;;;3895:34;2482:11:16;;1671:64;2579:43;;3742:18:33;;2645:67:16;;;;;;;;;;;;;;2534:196;;;2645:67;2534:196;;:::i;:::-;;;;;;;;;;;;;;;2499:245;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;;;;2445:359:16;2813:7;:14;;;;;;;;2410:424::o;-1:-1:-1:-;;;;;;;;:::o;:::-;;;;;;;;:::o;1579:183:33:-;1648:6;1701:2;1689:9;1680:7;1676:23;1672:32;1669:52;;;1717:1;1714;1707:12;1669:52;-1:-1:-1;1740:16:33;;1579:183;-1:-1:-1;1579:183:33:o;2069:336::-;2110:3;2148:5;2142:12;2172:1;2182:128;2196:6;2193:1;2190:13;2182:128;;;2293:4;2278:13;;;2274:24;;2268:31;2255:11;;;2248:52;2211:12;2182:128;;;2328:6;2325:1;2322:13;2319:48;;;2363:1;2354:6;2349:3;2345:16;2338:27;2319:48;-1:-1:-1;2383:16:33;;;;;2069:336;-1:-1:-1;;2069:336:33:o;2410:324::-;2607:66;2599:6;2595:79;2590:3;2583:92;2565:3;2691:37;2725:1;2720:3;2716:11;2708:6;2691:37;:::i;:::-;2684:44;2410:324;-1:-1:-1;;;;2410:324:33:o;2739:189::-;2868:3;2893:29;2918:3;2910:6;2893:29;:::i;:::-;2886:36;2739:189;-1:-1:-1;;;2739:189:33:o;2933:277::-;3000:6;3053:2;3041:9;3032:7;3028:23;3024:32;3021:52;;;3069:1;3066;3059:12;3021:52;3101:9;3095:16;3154:5;3147:13;3140:21;3133:5;3130:32;3120:60;;3176:1;3173;3166:12",
+    "linkReferences": {}
+  },
+  "ast": {
+    "absolutePath": "/Users/anonymous/Projects/blockchain/cl-2022-hackathon/src/test/PriceFeedConsumer.t.sol",
+    "id": 14054,
+    "exportedSymbols": {
+      "AggregatorV3Interface": [
+        965
+      ],
+      "DSTest": [
+        4753
+      ],
+      "MockV3Aggregator": [
+        15047
+      ],
+      "PriceFeedConsumer": [
+        13491
+      ],
+      "PriceFeedConsumerTest": [
+        14053
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "33:725:26",
+    "nodes": [
+      {
+        "id": 13991,
+        "nodeType": "PragmaDirective",
+        "src": "33:23:26",
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ]
+      },
+      {
+        "id": 13992,
+        "nodeType": "ImportDirective",
+        "src": "58:34:26",
+        "absolutePath": "/Users/anonymous/Projects/blockchain/cl-2022-hackathon/src/PriceFeedConsumer.sol",
+        "file": "../PriceFeedConsumer.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 14054,
+        "sourceUnit": 13492,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 13993,
+        "nodeType": "ImportDirective",
+        "src": "93:38:26",
+        "absolutePath": "/Users/anonymous/Projects/blockchain/cl-2022-hackathon/src/test/mocks/MockV3Aggregator.sol",
+        "file": "./mocks/MockV3Aggregator.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 14054,
+        "sourceUnit": 15048,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 13994,
+        "nodeType": "ImportDirective",
+        "src": "132:26:26",
+        "absolutePath": "/Users/anonymous/Projects/blockchain/cl-2022-hackathon/lib/ds-test/src/test.sol",
+        "file": "ds-test/test.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 14054,
+        "sourceUnit": 4754,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 14053,
+        "nodeType": "ContractDefinition",
+        "src": "160:597:26",
+        "nodes": [
+          {
+            "id": 13999,
+            "nodeType": "VariableDeclaration",
+            "src": "207:35:26",
+            "constant": true,
+            "functionSelector": "2e0f2625",
+            "mutability": "constant",
+            "name": "DECIMALS",
+            "nameLocation": "229:8:26",
+            "scope": 14053,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint8",
+              "typeString": "uint8"
+            },
+            "typeName": {
+              "id": 13997,
+              "name": "uint8",
+              "nodeType": "ElementaryTypeName",
+              "src": "207:5:26",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint8",
+                "typeString": "uint8"
+              }
+            },
+            "value": {
+              "hexValue": "3138",
+              "id": 13998,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "240:2:26",
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_18_by_1",
+                "typeString": "int_const 18"
+              },
+              "value": "18"
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 14006,
+            "nodeType": "VariableDeclaration",
+            "src": "248:50:26",
+            "constant": true,
+            "functionSelector": "053a5868",
+            "mutability": "constant",
+            "name": "INITIAL_ANSWER",
+            "nameLocation": "271:14:26",
+            "scope": 14053,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_int256",
+              "typeString": "int256"
+            },
+            "typeName": {
+              "id": 14000,
+              "name": "int256",
+              "nodeType": "ElementaryTypeName",
+              "src": "248:6:26",
+              "typeDescriptions": {
+                "typeIdentifier": "t_int256",
+                "typeString": "int256"
+              }
+            },
+            "value": {
+              "commonType": {
+                "typeIdentifier": "t_rational_1000000000000000000_by_1",
+                "typeString": "int_const 1000000000000000000"
+              },
+              "id": 14005,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "lValueRequested": false,
+              "leftExpression": {
+                "hexValue": "31",
+                "id": 14001,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": true,
+                "kind": "number",
+                "lValueRequested": false,
+                "nodeType": "Literal",
+                "src": "288:1:26",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_rational_1_by_1",
+                  "typeString": "int_const 1"
+                },
+                "value": "1"
+              },
+              "nodeType": "BinaryOperation",
+              "operator": "*",
+              "rightExpression": {
+                "commonType": {
+                  "typeIdentifier": "t_rational_1000000000000000000_by_1",
+                  "typeString": "int_const 1000000000000000000"
+                },
+                "id": 14004,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": true,
+                "lValueRequested": false,
+                "leftExpression": {
+                  "hexValue": "3130",
+                  "id": 14002,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "number",
+                  "lValueRequested": false,
+                  "nodeType": "Literal",
+                  "src": "292:2:26",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_rational_10_by_1",
+                    "typeString": "int_const 10"
+                  },
+                  "value": "10"
+                },
+                "nodeType": "BinaryOperation",
+                "operator": "**",
+                "rightExpression": {
+                  "hexValue": "3138",
+                  "id": 14003,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "number",
+                  "lValueRequested": false,
+                  "nodeType": "Literal",
+                  "src": "296:2:26",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_rational_18_by_1",
+                    "typeString": "int_const 18"
+                  },
+                  "value": "18"
+                },
+                "src": "292:6:26",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_rational_1000000000000000000_by_1",
+                  "typeString": "int_const 1000000000000000000"
+                }
+              },
+              "src": "288:10:26",
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_1000000000000000000_by_1",
+                "typeString": "int_const 1000000000000000000"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 14009,
+            "nodeType": "VariableDeclaration",
+            "src": "304:42:26",
+            "constant": false,
+            "functionSelector": "b546f014",
+            "mutability": "mutable",
+            "name": "priceFeedConsumer",
+            "nameLocation": "329:17:26",
+            "scope": 14053,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_PriceFeedConsumer_$13491",
+              "typeString": "contract PriceFeedConsumer"
+            },
+            "typeName": {
+              "id": 14008,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 14007,
+                "name": "PriceFeedConsumer",
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 13491,
+                "src": "304:17:26"
+              },
+              "referencedDeclaration": 13491,
+              "src": "304:17:26",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_PriceFeedConsumer_$13491",
+                "typeString": "contract PriceFeedConsumer"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 14012,
+            "nodeType": "VariableDeclaration",
+            "src": "352:40:26",
+            "constant": false,
+            "functionSelector": "082f8795",
+            "mutability": "mutable",
+            "name": "mockV3Aggregator",
+            "nameLocation": "376:16:26",
+            "scope": 14053,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_MockV3Aggregator_$15047",
+              "typeString": "contract MockV3Aggregator"
+            },
+            "typeName": {
+              "id": 14011,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 14010,
+                "name": "MockV3Aggregator",
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 15047,
+                "src": "352:16:26"
+              },
+              "referencedDeclaration": 15047,
+              "src": "352:16:26",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_MockV3Aggregator_$15047",
+                "typeString": "contract MockV3Aggregator"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 14036,
+            "nodeType": "FunctionDefinition",
+            "src": "399:184:26",
+            "body": {
+              "id": 14035,
+              "nodeType": "Block",
+              "src": "423:160:26",
+              "statements": [
+                {
+                  "expression": {
+                    "id": 14022,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 14015,
+                      "name": "mockV3Aggregator",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 14012,
+                      "src": "433:16:26",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_MockV3Aggregator_$15047",
+                        "typeString": "contract MockV3Aggregator"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "arguments": [
+                        {
+                          "id": 14019,
+                          "name": "DECIMALS",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 13999,
+                          "src": "473:8:26",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint8",
+                            "typeString": "uint8"
+                          }
+                        },
+                        {
+                          "id": 14020,
+                          "name": "INITIAL_ANSWER",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 14006,
+                          "src": "483:14:26",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_int256",
+                            "typeString": "int256"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_uint8",
+                            "typeString": "uint8"
+                          },
+                          {
+                            "typeIdentifier": "t_int256",
+                            "typeString": "int256"
+                          }
+                        ],
+                        "id": 14018,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "NewExpression",
+                        "src": "452:20:26",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_creation_nonpayable$_t_uint8_$_t_int256_$returns$_t_contract$_MockV3Aggregator_$15047_$",
+                          "typeString": "function (uint8,int256) returns (contract MockV3Aggregator)"
+                        },
+                        "typeName": {
+                          "id": 14017,
+                          "nodeType": "UserDefinedTypeName",
+                          "pathNode": {
+                            "id": 14016,
+                            "name": "MockV3Aggregator",
+                            "nodeType": "IdentifierPath",
+                            "referencedDeclaration": 15047,
+                            "src": "456:16:26"
+                          },
+                          "referencedDeclaration": 15047,
+                          "src": "456:16:26",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_contract$_MockV3Aggregator_$15047",
+                            "typeString": "contract MockV3Aggregator"
+                          }
+                        }
+                      },
+                      "id": 14021,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "452:46:26",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_MockV3Aggregator_$15047",
+                        "typeString": "contract MockV3Aggregator"
+                      }
+                    },
+                    "src": "433:65:26",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_MockV3Aggregator_$15047",
+                      "typeString": "contract MockV3Aggregator"
+                    }
+                  },
+                  "id": 14023,
+                  "nodeType": "ExpressionStatement",
+                  "src": "433:65:26"
+                },
+                {
+                  "expression": {
+                    "id": 14033,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 14024,
+                      "name": "priceFeedConsumer",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 14009,
+                      "src": "508:17:26",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_PriceFeedConsumer_$13491",
+                        "typeString": "contract PriceFeedConsumer"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "arguments": [
+                        {
+                          "arguments": [
+                            {
+                              "id": 14030,
+                              "name": "mockV3Aggregator",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 14012,
+                              "src": "558:16:26",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_contract$_MockV3Aggregator_$15047",
+                                "typeString": "contract MockV3Aggregator"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_contract$_MockV3Aggregator_$15047",
+                                "typeString": "contract MockV3Aggregator"
+                              }
+                            ],
+                            "id": 14029,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "nodeType": "ElementaryTypeNameExpression",
+                            "src": "550:7:26",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_type$_t_address_$",
+                              "typeString": "type(address)"
+                            },
+                            "typeName": {
+                              "id": 14028,
+                              "name": "address",
+                              "nodeType": "ElementaryTypeName",
+                              "src": "550:7:26",
+                              "typeDescriptions": {}
+                            }
+                          },
+                          "id": 14031,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "typeConversion",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "550:25:26",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        ],
+                        "id": 14027,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "NewExpression",
+                        "src": "528:21:26",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_creation_nonpayable$_t_address_$returns$_t_contract$_PriceFeedConsumer_$13491_$",
+                          "typeString": "function (address) returns (contract PriceFeedConsumer)"
+                        },
+                        "typeName": {
+                          "id": 14026,
+                          "nodeType": "UserDefinedTypeName",
+                          "pathNode": {
+                            "id": 14025,
+                            "name": "PriceFeedConsumer",
+                            "nodeType": "IdentifierPath",
+                            "referencedDeclaration": 13491,
+                            "src": "532:17:26"
+                          },
+                          "referencedDeclaration": 13491,
+                          "src": "532:17:26",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_contract$_PriceFeedConsumer_$13491",
+                            "typeString": "contract PriceFeedConsumer"
+                          }
+                        }
+                      },
+                      "id": 14032,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "528:48:26",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_PriceFeedConsumer_$13491",
+                        "typeString": "contract PriceFeedConsumer"
+                      }
+                    },
+                    "src": "508:68:26",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_PriceFeedConsumer_$13491",
+                      "typeString": "contract PriceFeedConsumer"
+                    }
+                  },
+                  "id": 14034,
+                  "nodeType": "ExpressionStatement",
+                  "src": "508:68:26"
+                }
+              ]
+            },
+            "functionSelector": "0a9254e4",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setUp",
+            "nameLocation": "408:5:26",
+            "parameters": {
+              "id": 14013,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "413:2:26"
+            },
+            "returnParameters": {
+              "id": 14014,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "423:0:26"
+            },
+            "scope": 14053,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "id": 14052,
+            "nodeType": "FunctionDefinition",
+            "src": "589:166:26",
+            "body": {
+              "id": 14051,
+              "nodeType": "Block",
+              "src": "644:111:26",
+              "statements": [
+                {
+                  "assignments": [
+                    14040
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 14040,
+                      "mutability": "mutable",
+                      "name": "price",
+                      "nameLocation": "661:5:26",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 14051,
+                      "src": "654:12:26",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_int256",
+                        "typeString": "int256"
+                      },
+                      "typeName": {
+                        "id": 14039,
+                        "name": "int256",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "654:6:26",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_int256",
+                          "typeString": "int256"
+                        }
+                      },
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 14044,
+                  "initialValue": {
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "expression": {
+                        "id": 14041,
+                        "name": "priceFeedConsumer",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 14009,
+                        "src": "669:17:26",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_PriceFeedConsumer_$13491",
+                          "typeString": "contract PriceFeedConsumer"
+                        }
+                      },
+                      "id": 14042,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "getLatestPrice",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 13480,
+                      "src": "669:32:26",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_view$__$returns$_t_int256_$",
+                        "typeString": "function () view external returns (int256)"
+                      }
+                    },
+                    "id": 14043,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "669:34:26",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "654:49:26"
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "commonType": {
+                          "typeIdentifier": "t_int256",
+                          "typeString": "int256"
+                        },
+                        "id": 14048,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "id": 14046,
+                          "name": "price",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 14040,
+                          "src": "724:5:26",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_int256",
+                            "typeString": "int256"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "==",
+                        "rightExpression": {
+                          "id": 14047,
+                          "name": "INITIAL_ANSWER",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 14006,
+                          "src": "733:14:26",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_int256",
+                            "typeString": "int256"
+                          }
+                        },
+                        "src": "724:23:26",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 14045,
+                      "name": "assertTrue",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        3236,
+                        3257
+                      ],
+                      "referencedDeclaration": 3236,
+                      "src": "713:10:26",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_bool_$returns$__$",
+                        "typeString": "function (bool)"
+                      }
+                    },
+                    "id": 14049,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "713:35:26",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 14050,
+                  "nodeType": "ExpressionStatement",
+                  "src": "713:35:26"
+                }
+              ]
+            },
+            "functionSelector": "27b74cef",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "test_consumer_returns_starting_value",
+            "nameLocation": "598:36:26",
+            "parameters": {
+              "id": 14037,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "634:2:26"
+            },
+            "returnParameters": {
+              "id": 14038,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "644:0:26"
+            },
+            "scope": 14053,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 13995,
+              "name": "DSTest",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 4753,
+              "src": "194:6:26"
+            },
+            "id": 13996,
+            "nodeType": "InheritanceSpecifier",
+            "src": "194:6:26"
+          }
+        ],
+        "canonicalName": "PriceFeedConsumerTest",
+        "contractDependencies": [
+          13491,
+          15047
+        ],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          14053,
+          4753
+        ],
+        "name": "PriceFeedConsumerTest",
+        "nameLocation": "169:21:26",
+        "scope": 14054,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  }
+}

@@ -6,11 +6,11 @@ module.exports = {
     networks: {
         hardhat: {
             // If you want to do some forking set `enabled` to true
-            forking: {
+            /*forking: {
                 url: MAINNET_RPC_URL,
                 blockNumber: FORKING_BLOCK_NUMBER,
                 enabled: false,
-            },
+            },*/
             chainId: 31337,
         },
     },

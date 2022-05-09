@@ -20,7 +20,7 @@ install :; forge install dapphub/ds-test && forge install rari-capital/solmate &
 update:; forge update
 
 # Builds
-build  :; forge clean && forge build --optimize --optimizer-runs 1000000
+build  :; forge clean && forge build --optimize --optimizer-runs 1000000 --out frontend/src/contracts
 dappbuild :; dapp build
 
 # chmod scripts
@@ -40,3 +40,9 @@ mainnet-fork :; npx hardhat node --fork ${ETH_MAINNET_RPC_URL}
 
 # Rename all instances of this repo with the new repo name
 rename :; chmod +x ./scripts/* && ./scripts/rename.sh
+
+setup-yarn:
+	yarn
+
+local-node: setup-yarn
+	yarn hardhat node

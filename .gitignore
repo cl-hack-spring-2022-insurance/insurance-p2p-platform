@@ -2,6 +2,7 @@ cache/
 frontend/src/contracts
 node_modules/*
 node_modules
+out/
 
 # Ignore Environment Variables!
 .env

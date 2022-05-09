@@ -46,3 +46,6 @@ setup-yarn:
 
 local-node: setup-yarn
 	yarn hardhat node
+
+frontend: setup-yarn
+	cd frontend && yarn start

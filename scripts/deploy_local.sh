@@ -9,7 +9,7 @@ echo Which contract do you want to deploy \(eg Greeter\)?
 read contract
 
 # Read the constructor arguments
-echo Enter constructor arguments separated by spaces \(eg 1 2 3\):
+echo Enter constructor arguments separated by spaces \(eg 1 2 3\). Press Enter if the constructor has no arguments:
 read -ra args
 
 if [ -z "$args" ]

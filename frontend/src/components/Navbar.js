@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useContext } from "react";
 import styled from 'styled-components';
 import { ContractContext } from '../context/ContractContext';
-
+import { shortenAddress } from "./utils/shortenAddress";
 import { Link } from "react-router-dom";
 
 const NavContainer = styled.div`
@@ -41,10 +41,10 @@ const RouterSpace = styled.div`
 
 const Routers = styled.div`
   padding: 0 4px;
-  background-color:grey;
+  background-color:white;
   
   font-size: 20px;
-  color: white;
+  color: black;
 `;
 
 
@@ -63,7 +63,7 @@ const LoginButton = styled.button`
 
 
 export function Navbar(){
-  console.log(useContext(ContractContext))
+  const { connectWallet, currentAccount } = useContext(ContractContext);
   return (
     <NavContainer>
       <ProjectName>
@@ -88,9 +88,18 @@ export function Navbar(){
           </Routers>
         </RouterSpace>
         <LoginSpace>
-
-        
-
+          {!currentAccount && // if there is a metamask acc connected dont render button
+            <LoginButton
+              onClick={connectWallet}
+            >
+              Connect
+            </LoginButton>
+          }
+          {currentAccount && // if there is a metamask acc display address 
+            <LoginButton>
+              {shortenAddress(currentAccount)}
+            </LoginButton>
+          }
         </LoginSpace>
       </ProjectUtil>
     </NavContainer>

@@ -1,5 +1,7 @@
 import React from "react";
+import { useState, useContext } from "react";
 import styled from 'styled-components';
+import { ContractContext } from '../context/ContractContext';
 
 import { Link } from "react-router-dom";
 
@@ -61,6 +63,7 @@ const LoginButton = styled.button`
 
 
 export function Navbar(){
+  console.log(useContext(ContractContext))
   return (
     <NavContainer>
       <ProjectName>
@@ -85,9 +88,9 @@ export function Navbar(){
           </Routers>
         </RouterSpace>
         <LoginSpace>
-          <LoginButton>
-            login
-          </LoginButton>
+
+        
+
         </LoginSpace>
       </ProjectUtil>
     </NavContainer>

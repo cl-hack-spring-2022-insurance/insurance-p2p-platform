@@ -20,9 +20,9 @@ contract InsureWine is ChainlinkClient {
 
     /* ========== CONSUMER STATE VARIABLES ========== */
 
-    address insurer;
-    address client;
-    uint256 duration;
+    address public insurer;
+    address public client;
+    uint256 public duration;
     string public lat;
     string public lon;
     uint256 public premium;
@@ -33,7 +33,7 @@ contract InsureWine is ChainlinkClient {
     int16 public temperatureTotal;
     DateTime public datetime;
     uint256 public amount;
-    bool active;
+    bool public active;
     uint256 public requestCount;
     bytes32 public reqId;
     bytes32 public requestIdLocationkey;

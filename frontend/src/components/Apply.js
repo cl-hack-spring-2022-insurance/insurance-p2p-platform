@@ -15,10 +15,8 @@ const FormLabel = styled.label`
   width: 200px;
 `;
 
-
 export function Apply(){
 
-  //28.613939,77.209021
   const [mainContract, setMainContract] = useState(null);
   const [startMonth, setStartMonth]     = useState("2022-01");
   const [endMonth, setEndMonth]         = useState("2022-07");
@@ -67,6 +65,7 @@ export function Apply(){
 
   return (
     <>
+      <h1>Apply for Wine Insurance</h1>
       <fieldset>
         <legend>Policy Data</legend>
         <p>Submit the data of the grape insurance you'd like to apply for</p>

@@ -12,7 +12,6 @@ contract DeployNewWineInsurancePolicy {
         address _link,
         address _oracle,
         uint256 _amount,
-        address _client,
         uint256 months,
         string memory _lat,
         string memory _lon
@@ -21,7 +20,7 @@ contract DeployNewWineInsurancePolicy {
             _link,
             _oracle,
             _amount, 
-            _client,
+            msg.sender,
             months,
             _lat,
             _lon

@@ -17,6 +17,7 @@ export function Insure(){
         provider.getSigner(0)
       );
       const insurancePolicies = await contract.getInsurancePolicies();
+      console.log(insurancePolicies);
       setInsurancePolicies(insurancePolicies);
     }
     fetchData();

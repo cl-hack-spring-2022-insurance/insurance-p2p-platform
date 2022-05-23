@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: MIT
-pragma solidity 0.8.9;
+pragma solidity ^0.8.9;
 
 import "@chainlink/contracts/src/v0.8/ChainlinkClient.sol";
-import "./datetime.sol";
+import "./Datetime.sol";
 
 /**
  * @title Wine Insurance Contract for Chainlink hackathon .

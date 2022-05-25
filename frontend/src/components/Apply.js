@@ -6,6 +6,34 @@ import contractAddress from "../contract-address.json";
 
 import styled from 'styled-components';
 
+
+const ApplyPage = styled.div`
+  height: 800px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`
+
+const Form = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+  background-color: white;
+  border: 1px solid black;
+  width: 30%;
+  height: 70%;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
+`
+
+const FormTitle = styled.h1`
+  color: #722F37;
+`
+
 const FormField = styled.div`
   margin-bottom: 10px;
 `;
@@ -14,6 +42,12 @@ const FormLabel = styled.label`
   display: inline-block;
   width: 200px;
 `;
+
+const SubmitButton = styled.button`
+  background-color: #722F37;
+  color: white;
+  width: 120px;
+`
 
 export function Apply(){
 
@@ -64,78 +98,79 @@ export function Apply(){
   }
 
   return (
-    <>
-      <h1>Apply for Wine Insurance</h1>
+    <ApplyPage>
+      <Form>
+      <FormTitle>Apply for Wine Insurance</FormTitle>
       <fieldset>
         <legend>Policy Data</legend>
         <p>Submit the data of the grape insurance you'd like to apply for</p>
+          <FormField>
+            <FormLabel htmlFor="start_month">Start month: </FormLabel>
+            <input 
+              id="start_month" 
+              name="start_month" 
+              type="month" 
+              value={startMonth}
+              onChange={(e) => setStartMonth(e.target.value)} 
+              />
+          </FormField>
 
-        <FormField>
-          <FormLabel htmlFor="start_month">Start month: </FormLabel>
-          <input 
-            id="start_month" 
-            name="start_month" 
-            type="month" 
-            value={startMonth}
-            onChange={(e) => setStartMonth(e.target.value)} 
-            />
-        </FormField>
+          <FormField>
+            <FormLabel htmlFor="end_month">End month: </FormLabel>
+            <input 
+              id="end_month" 
+              name="end_month" 
+              type="month" 
+              value={endMonth}
+              onChange={(e) => setEndMonth(e.target.value)} />
+          </FormField>
 
-        <FormField>
-          <FormLabel htmlFor="end_month">End month: </FormLabel>
-          <input 
-            id="end_month" 
-            name="end_month" 
-            type="month" 
-            value={endMonth}
-            onChange={(e) => setEndMonth(e.target.value)} />
-        </FormField>
+          <FormField>
+            <FormLabel htmlFor="amount">Amount to cover: </FormLabel>
+            <input 
+              id="amount" 
+              name="amount" 
+              type="number" 
+              placeholder="ETH"
+              value={amount}
+              onChange={(e) => setAmount(e.target.value)}
+              />
+          </FormField>
 
-        <FormField>
-          <FormLabel htmlFor="amount">Amount to cover: </FormLabel>
-          <input 
-            id="amount" 
-            name="amount" 
-            type="number" 
-            placeholder="ETH"
-            value={amount}
-            onChange={(e) => setAmount(e.target.value)}
-            />
-        </FormField>
+          <FormField>
+            <FormLabel htmlFor="amount">Grape type:</FormLabel>
+            <select disabled>
+                <option>Cabernet Sauvignon</option>
+            </select>
+          </FormField>
 
-        <FormField>
-          <FormLabel htmlFor="amount">Grape type:</FormLabel>
-          <select disabled>
-              <option>Cabernet Sauvignon</option>
-          </select>
-        </FormField>
+          <FormField>
+            <FormLabel htmlFor="latitude">Location (latitude):</FormLabel>
+            <input 
+              id="latitude" 
+              name="latitude" 
+              type="number"
+              value={latitude}
+              onChange={(e) => setLatitude(e.target.value)}
+              />
+          </FormField>
 
-        <FormField>
-          <FormLabel htmlFor="latitude">Location (latitude):</FormLabel>
-          <input 
-            id="latitude" 
-            name="latitude" 
-            type="number"
-            value={latitude}
-            onChange={(e) => setLatitude(e.target.value)}
-            />
-        </FormField>
-
-        <FormField>
-          <FormLabel htmlFor="longitude">Location (longitude):</FormLabel>
-          <input 
-            id="longitude" 
-            name="longitude" 
-            type="number"
-            value={longitude}
-            onChange={(e) => setLongitude(e.target.value)}
-            />
-        </FormField>
+          <FormField>
+            <FormLabel htmlFor="longitude">Location (longitude):</FormLabel>
+            <input 
+              id="longitude" 
+              name="longitude" 
+              type="number"
+              value={longitude}
+              onChange={(e) => setLongitude(e.target.value)}
+              />
+          </FormField>
       </fieldset>
 
-      <FormField>
-        <button onClick={() => applyForPolicy()}>Apply</button>
-      </FormField>
-    </>
+        <FormField>
+          <SubmitButton onClick={() => applyForPolicy()}>Apply</SubmitButton>
+        </FormField>
+      </Form>
+    </ApplyPage>
   )
 }

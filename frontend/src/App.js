@@ -11,13 +11,13 @@ import { Insure } from './components/Insure';
 import { Routes , Route, Link } from 'react-router-dom';
 
 const FullApp = styled.div`
-    height: max;
-    width: max;
-`;
+    height: 100vh;
+    background-color: white;
+`
 
 export function App () {
     return(
-        <div>
+        <FullApp>
             <Navbar />
             <div>
                 <Routes>
@@ -27,7 +27,6 @@ export function App () {
                     <Route exact path='/insure' element={<Insure />} />
                 </Routes>
             </div>
-            
-        </div>
+        </FullApp>
     )
 }

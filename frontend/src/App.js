@@ -9,6 +9,7 @@ import { Apply } from './components/Apply';
 import { Insure } from './components/Insure';
 
 import { Routes , Route, Link } from 'react-router-dom';
+import { InsurePolicy } from "./components/InsurePolicy";
 
 const FullApp = styled.div`
     height: 100vh;
@@ -25,6 +26,7 @@ export function App () {
                     <Route exact path='/dashboard' element={<Dashboard />} />
                     <Route exact path='/apply' element={<Apply />} />
                     <Route exact path='/insure' element={<Insure />} />
+                    <Route exact path='/insure/:address' element={<InsurePolicy />} />
                 </Routes>
             </div>
         </FullApp>

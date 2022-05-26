@@ -73,17 +73,17 @@ export function Navbar(){
       <ProjectUtil>
         <RouterSpace>
           <Routers>
+            <Link to='/' style={{color: '#FFF'}}>
+              Homepage
+            </Link>
+          </Routers>
+          <Routers>
             <Link to='/dashboard' style={{color: '#FFF'}}>
               Dashboard
             </Link>
           </Routers>
           <Routers>
             <Link to='/apply' style={{color: '#FFF'}}>
-              Apply
-            </Link>
-          </Routers>
-          <Routers>
-            <Link to='/insure' style={{color: '#FFF'}}>
               Insure
             </Link>
           </Routers>

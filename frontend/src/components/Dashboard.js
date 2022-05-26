@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { ethers, utils } from "ethers";
+import { useNavigate } from "react-router-dom";
 import styled from 'styled-components';
 
 import DeployNewWineInsurancePolicy from "../contracts/DeployNewWineInsurancePolicy.sol/DeployNewWineInsurancePolicy.json";
@@ -15,9 +16,12 @@ const TableHeader = styled.th`
 `;
 
 export function Dashboard(){
-  
+
+  const navigate = useNavigate();
+
   const [mainContract, setMainContract] = useState(null);
-  const [insurancePolicies, setInsurancePolicies] = useState([]);
+  const [insurerPolicies, setInsurerPolicies] = useState([]);
+  const [clientPolicies, setClientPolicies] = useState([]);
 
   useEffect(() => {
     async function fetchData() {
@@ -27,8 +31,10 @@ export function Dashboard(){
         DeployNewWineInsurancePolicy.abi,
         provider.getSigner(0)
       );
-      const insurancePolicyAddresses = await contract.getUserInsurancePolicies();
-      const insurancePolicies = await Promise.all(insurancePolicyAddresses.map(async policyAddress => {
+      const insurerPolicyAddresses = await contract.getInsurerPolicies();
+      const clientPolicyAddresses = await contract.getClientPolicies();
+
+      const insurerPolicies = await Promise.all(insurerPolicyAddresses.map(async policyAddress => {
         const insuranceContract = new ethers.Contract(
           policyAddress,
           InsureWine.abi,
@@ -39,16 +45,41 @@ export function Dashboard(){
         const active = await insuranceContract.active();
         const amount = await insuranceContract.amount();
         const duration = await insuranceContract.duration();
+        const premium = await insuranceContract.premium();
         return  {
           address: policyAddress,
           location: latitude + "," + longitude,
           active,
           amount: utils.formatEther(amount.toString()),
-          duration: duration.toString()
+          duration: duration.toString(),
+          premium: utils.formatEther(premium.toString())
+         }
+      }));
+
+      const clientPolicies =  await Promise.all(clientPolicyAddresses.map(async policyAddress => {
+        const insuranceContract = new ethers.Contract(
+          policyAddress,
+          InsureWine.abi,
+          provider.getSigner(0)
+        );
+        const latitude = await insuranceContract.lat();
+        const longitude = await insuranceContract.lon();
+        const active = await insuranceContract.active();
+        const amount = await insuranceContract.amount();
+        const duration = await insuranceContract.duration();
+        const premium = await insuranceContract.premium();
+        return  {
+          address: policyAddress,
+          location: latitude + "," + longitude,
+          active,
+          amount: utils.formatEther(amount.toString()),
+          duration: duration.toString(),
+          premium: utils.formatEther(premium.toString())
          }
       }));
       setMainContract(contract);
-      setInsurancePolicies(insurancePolicies);
+      setInsurerPolicies(insurerPolicies);
+      setClientPolicies(clientPolicies);
     }
     fetchData();
   }, []);
@@ -65,7 +96,7 @@ export function Dashboard(){
       <h1>Dashboard</h1>
       <button onClick={() => handleUpdateState()}>Update State of all Contracts</button>
       <hr />
-      <h2>My Insurance Policies</h2>
+      <h2>Insurer Policies</h2>
       <table border="1">
         <thead>
           <tr>
@@ -74,18 +105,50 @@ export function Dashboard(){
             <TableHeader>Amount to cover</TableHeader>
             <TableHeader>Duration</TableHeader>
             <TableHeader>Grape Type</TableHeader>
+            <TableHeader>Premium</TableHeader>
             <TableHeader>Active</TableHeader>
           </tr>
         </thead>
         <tbody>
-          {insurancePolicies.map((policy, i) => {
+          {insurerPolicies.map((policy, i) => {
             return (
               <tr key={i}>
-                <TableCell>{policy.address}</TableCell>
+                <TableCell><a href="#" onClick={() => navigate("/insure/" + policy.address)}>{policy.address}</a></TableCell>
                 <TableCell><a href={ "https://www.google.com/maps/search/?api=1&query=" + policy.location} target="_blank">{policy.location}</a></TableCell>
                 <TableCell>{policy.amount} ETH</TableCell>
                 <TableCell>{policy.duration} seconds</TableCell>
                 <TableCell>Cabernet Sauvignon</TableCell>
+                <TableCell>{policy.premium} ETH</TableCell>
+                <TableCell>{policy.active ? "Yes" : "No"}</TableCell>
+              </tr>
+            )
+          }) }
+        </tbody>
+      </table>
+      <hr />
+      <h2>Client Policies</h2>
+      <table border="1">
+        <thead>
+          <tr>
+            <TableHeader>Address</TableHeader>
+            <TableHeader>Location</TableHeader>
+            <TableHeader>Amount to cover</TableHeader>
+            <TableHeader>Duration</TableHeader>
+            <TableHeader>Grape Type</TableHeader>
+            <TableHeader>Premium</TableHeader>
+            <TableHeader>Active</TableHeader>
+          </tr>
+        </thead>
+        <tbody>
+          {clientPolicies.map((policy, i) => {
+            return (
+              <tr key={i}>
+                <TableCell><a href="#" onClick={() => navigate("/insure/" + policy.address)}>{policy.address}</a></TableCell>
+                <TableCell><a href={ "https://www.google.com/maps/search/?api=1&query=" + policy.location} target="_blank">{policy.location}</a></TableCell>
+                <TableCell>{policy.amount} ETH</TableCell>
+                <TableCell>{policy.duration} seconds</TableCell>
+                <TableCell>Cabernet Sauvignon</TableCell>
+                <TableCell>{policy.premium} ETH</TableCell>
                 <TableCell>{policy.active ? "Yes" : "No"}</TableCell>
               </tr>
             )

@@ -60,6 +60,8 @@ export function Apply(){
   const [amount, setAmount]             = useState("0.01");
   const [latitude, setLatitude]         = useState("28.613939");
   const [longitude, setLongitude]       = useState("77.209021");
+  const [client, setClient]             = useState("0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266");
+
   
   useEffect(() => {
     async function fetchContract() {
@@ -84,6 +86,7 @@ export function Apply(){
       contractAddress.Link,
       contractAddress.Oracle,
       ethers.utils.parseEther(amount),
+      client,
       months,
       latitude,
       longitude,
@@ -107,7 +110,7 @@ export function Apply(){
   return (
     <ApplyPage>
       <Form>
-      <FormTitle>Apply for Wine Insurance</FormTitle>
+      <FormTitle>Register Wine Insurance</FormTitle>
       <fieldset>
         <legend>Policy Data</legend>
         <p>Submit the data of the grape insurance you'd like to apply for</p>
@@ -170,6 +173,16 @@ export function Apply(){
               type="number"
               value={longitude}
               onChange={(e) => setLongitude(e.target.value)}
+              />
+          </FormField>
+          <FormField>
+            <FormLabel htmlFor="client">Client (Address):</FormLabel>
+            <input 
+              id="client" 
+              name="client" 
+              type="text"
+              value={client}
+              onChange={(e) => setClient(e.target.value)}
               />
           </FormField>
       </fieldset>

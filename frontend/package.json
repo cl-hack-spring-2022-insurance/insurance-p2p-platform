@@ -9,12 +9,15 @@
     "react-dom": "^18.1.0",
     "react-router-dom": "^6.3.0",
     "react-scripts": "^5.0.1",
-    "styled-components": "^5.3.5"
+    "styled-components": "^5.3.5",
+    "ipfs-http-client": "^55.0.0",
+    "chalk": "^4.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "ipfs": "node ./scripts/ipfs.js"
   },
   "eslintConfig": {
     "extends": "react-app"

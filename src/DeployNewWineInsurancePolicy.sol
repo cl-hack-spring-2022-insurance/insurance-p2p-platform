@@ -33,4 +33,15 @@ contract DeployNewWineInsurancePolicy {
     function getInsurancePolicies() public view returns(address[] memory) {
         return insurancePolicies;
     }
+
+    function updateStateOfAllContracts() external {
+        for (uint i = 0; i < insurancePolicies.length; i++) {
+            InsureWine insurancePolicy = InsureWine(insurancePolicies[i]);
+            insurancePolicy.updatestate();
+        }
+    }
+
+    function getUserInsurancePolicies() public view returns(address[] memory) {
+        return insurancePolicyOwnerships[msg.sender];
+    }
 }

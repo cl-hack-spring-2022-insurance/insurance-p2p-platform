@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { ethers } from "ethers";
 
 import DeployNewWineInsurancePolicy from "../contracts/DeployNewWineInsurancePolicy.sol/DeployNewWineInsurancePolicy.json";
@@ -51,6 +52,8 @@ const SubmitButton = styled.button`
 
 export function Apply(){
 
+  const navigate = useNavigate();
+
   const [mainContract, setMainContract] = useState(null);
   const [startMonth, setStartMonth]     = useState("2022-01");
   const [endMonth, setEndMonth]         = useState("2022-07");
@@ -71,13 +74,13 @@ export function Apply(){
     fetchContract();
   }, []);
 
-  function applyForPolicy() {
+  async function applyForPolicy() {
 
     const startMonthDate = new Date(startMonth); 
     const endMonthDate = new Date(endMonth);
     const months = monthDifference(startMonthDate, endMonthDate);
-
-    mainContract.createNewPolicy(
+    
+    const tx = await mainContract.createNewPolicy(
       contractAddress.Link,
       contractAddress.Oracle,
       ethers.utils.parseEther(amount),
@@ -88,6 +91,10 @@ export function Apply(){
         value: ethers.utils.parseEther(amount)
       }
     );
+    console.log(tx);
+    if (tx.hash !== null) {
+      navigate("/dashboard");
+    }
   }
 
   function monthDifference(d1, d2) {
@@ -168,7 +175,7 @@ export function Apply(){
       </fieldset>
 
         <FormField>
-          <SubmitButton onClick={() => applyForPolicy()}>Apply</SubmitButton>
+          <SubmitButton onClick={async() => await applyForPolicy()}>Apply</SubmitButton>
         </FormField>
       </Form>
     </ApplyPage>

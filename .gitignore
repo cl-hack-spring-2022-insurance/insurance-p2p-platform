@@ -1,3 +1,4 @@
+.DS_Store
 cache/
 frontend/src/contracts
 node_modules/*

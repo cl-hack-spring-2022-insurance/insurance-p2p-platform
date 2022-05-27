@@ -57,7 +57,7 @@ export function Dashboard(){
       const insurerPolicies = await Promise.all(insurerPolicyAddresses.map(async policyAddress => {
         const insuranceContract = new ethers.Contract(
           policyAddress,
-          //InsureWine.abi,
+          InsureWine.abi,
           provider.getSigner(0)
         );
         const latitude = await insuranceContract.lat();

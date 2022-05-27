@@ -1,5 +1,7 @@
+.DS_Store
 cache/
 frontend/src/contracts
+frontend/build/*
 node_modules/*
 node_modules
 out/

@@ -11,7 +11,7 @@ import "./Datetime.sol";
  * @dev Uses @chainlink/contracts 0.4.0.
  */
 
-//28.613939,77.209021
+// 28.613939,77.209021
 // oracle 0xfF07C97631Ff3bAb5e5e5660Cdf47AdEd8D4d4Fd
 // link 0xa36085F69e2889c224210F603D836748e7dC0088
 
@@ -95,12 +95,13 @@ contract InsureWine is ChainlinkClient {
         address _oracle,
         uint256 _amount,
         address _client,
+        address _insurer,
         uint256 months,
         string memory _lat,
         string memory _lon
     ) public payable {
         require(msg.value >= _amount, "Not enough sent ");
-        insurer = msg.sender;
+        insurer = _insurer;
         client = _client;
         duration = months * 30 * DAYS_IN_SECONDS;
         lat = _lat;
@@ -242,5 +243,9 @@ contract InsureWine is ChainlinkClient {
             linkToken.transfer(msg.sender, linkToken.balanceOf(address(this))),
             "Unable to transfer"
         );
+    }
+
+    function payPremium() external payable {
+        require(msg.value == premium, "Not enough sent ");
     }
 }

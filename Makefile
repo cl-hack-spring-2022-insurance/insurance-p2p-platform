@@ -49,3 +49,6 @@ local-node: setup-yarn
 
 frontend: setup-yarn
 	cd frontend && yarn start
+
+ipfs: setup-yarn
+	cd frontend && yarn build && yarn ipfs

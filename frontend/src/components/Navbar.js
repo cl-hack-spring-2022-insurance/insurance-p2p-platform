@@ -32,7 +32,7 @@ const ProjectUtil = styled.div`
 `;
 
 const RouterSpace = styled.div`
-  width: 50%;
+  width: 60%;
   
   display:flex;
   align-items: center;
@@ -40,24 +40,23 @@ const RouterSpace = styled.div`
 `;
 
 const Routers = styled.div`
-  padding: 0 4px;
-  background-color:white;
-  
+  padding: 0 4px;  
   font-size: 20px;
   color: black;
+  
 `;
 
 
 const LoginSpace = styled.div`
-  width: 50%;
-  
+  width: 40%;
   display: flex;
   align-items: center;
   justify-content: center;
 `
 
 const LoginButton = styled.button`
-  background-color: grey;
+  background-color: #white;
+  border-radius: 10px;
 `
 
 
@@ -67,22 +66,19 @@ export function Navbar(){
   return (
     <NavContainer>
       <ProjectName>
-        Parametric Wine Insurance
+        <Link to='/' style={{textDecoration: 'none', color: '#FFF'}}>
+          Parametric Wine Insurance
+        </Link>
       </ProjectName>
       <ProjectUtil>
         <RouterSpace>
           <Routers>
-            <Link to='/dashboard'>
+            <Link to='/dashboard' style={{color: '#FFF'}}>
               Dashboard
             </Link>
           </Routers>
           <Routers>
-            <Link to='/apply'>
-              Apply
-            </Link>
-          </Routers>
-          <Routers>
-            <Link to='/insure'>
+            <Link to='/apply' style={{color: '#FFF'}}>
               Insure
             </Link>
           </Routers>

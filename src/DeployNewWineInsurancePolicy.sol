@@ -4,7 +4,6 @@ pragma solidity ^0.8.9;
 import "./InsureWine.sol";
 
 contract DeployNewWineInsurancePolicy {
-
     address[] public insurancePolicies;
     mapping(address => address[]) public insurerOwnership;
     mapping(address => address[]) public clientOwnership;
@@ -21,7 +20,7 @@ contract DeployNewWineInsurancePolicy {
         InsureWine insurewine = (new InsureWine){value: _amount}(
             _link,
             _oracle,
-            _amount, 
+            _amount,
             _client,
             msg.sender,
             months,
@@ -32,25 +31,24 @@ contract DeployNewWineInsurancePolicy {
         insurancePolicies.push(insurancePolicyAddress);
         insurerOwnership[msg.sender].push(insurancePolicyAddress);
         clientOwnership[_client].push(insurancePolicyAddress);
-
     }
 
-    function getInsurancePolicies() public view returns(address[] memory) {
+    function getInsurancePolicies() public view returns (address[] memory) {
         return insurancePolicies;
     }
 
     function updateStateOfAllContracts() external {
-        for (uint i = 0; i < insurancePolicies.length; i++) {
+        for (uint256 i = 0; i < insurancePolicies.length; i++) {
             InsureWine insurancePolicy = InsureWine(insurancePolicies[i]);
             insurancePolicy.updatestate();
         }
     }
 
-    function getInsurerPolicies() public view returns(address[] memory) {
+    function getInsurerPolicies() public view returns (address[] memory) {
         return insurerOwnership[msg.sender];
     }
 
-    function getClientPolicies() public view returns(address[] memory) {
+    function getClientPolicies() public view returns (address[] memory) {
         return clientOwnership[msg.sender];
     }
 }

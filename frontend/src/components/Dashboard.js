@@ -7,6 +7,26 @@ import DeployNewWineInsurancePolicy from "../contracts/DeployNewWineInsurancePol
 import InsureWine from "../contracts/InsureWine.sol/InsureWine.json";
 import contractAddress from "../contract-address.json";
 
+const DashBoardFullPage = styled.div`
+  height: 800px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+`
+
+const TableSpace = styled.div`
+  width: 80%;
+  height: 80%;
+  border: 1px solid black;
+
+  display:flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  padding-bottom: 50px;
+`
+
 const TableCell = styled.td`
   border: 1px solid black;
 `;
@@ -37,7 +57,7 @@ export function Dashboard(){
       const insurerPolicies = await Promise.all(insurerPolicyAddresses.map(async policyAddress => {
         const insuranceContract = new ethers.Contract(
           policyAddress,
-          InsureWine.abi,
+          //InsureWine.abi,
           provider.getSigner(0)
         );
         const latitude = await insuranceContract.lat();
@@ -92,69 +112,72 @@ export function Dashboard(){
   }
 
   return (
-    <>
-      <h1>Dashboard</h1>
-      <button onClick={() => handleUpdateState()}>Update State of all Contracts</button>
-      <hr />
-      <h2>Insurer Policies</h2>
-      <table border="1">
-        <thead>
-          <tr>
-            <TableHeader>Address</TableHeader>
-            <TableHeader>Location</TableHeader>
-            <TableHeader>Amount to cover</TableHeader>
-            <TableHeader>Duration</TableHeader>
-            <TableHeader>Grape Type</TableHeader>
-            <TableHeader>Premium</TableHeader>
-            <TableHeader>Active</TableHeader>
-          </tr>
-        </thead>
-        <tbody>
-          {insurerPolicies.map((policy, i) => {
-            return (
-              <tr key={i}>
-                <TableCell><a href="#" onClick={() => navigate("/insure/" + policy.address)}>{policy.address}</a></TableCell>
-                <TableCell><a href={ "https://www.google.com/maps/search/?api=1&query=" + policy.location} target="_blank">{policy.location}</a></TableCell>
-                <TableCell>{policy.amount} ETH</TableCell>
-                <TableCell>{policy.duration} seconds</TableCell>
-                <TableCell>Cabernet Sauvignon</TableCell>
-                <TableCell>{policy.premium} ETH</TableCell>
-                <TableCell>{policy.active ? "Yes" : "No"}</TableCell>
-              </tr>
-            )
-          }) }
-        </tbody>
-      </table>
-      <hr />
-      <h2>Client Policies</h2>
-      <table border="1">
-        <thead>
-          <tr>
-            <TableHeader>Address</TableHeader>
-            <TableHeader>Location</TableHeader>
-            <TableHeader>Amount to cover</TableHeader>
-            <TableHeader>Duration</TableHeader>
-            <TableHeader>Grape Type</TableHeader>
-            <TableHeader>Premium</TableHeader>
-            <TableHeader>Active</TableHeader>
-          </tr>
-        </thead>
-        <tbody>
-          {clientPolicies.map((policy, i) => {
-            return (
-              <tr key={i}>
-                <TableCell><a href="#" onClick={() => navigate("/insure/" + policy.address)}>{policy.address}</a></TableCell>
-                <TableCell><a href={ "https://www.google.com/maps/search/?api=1&query=" + policy.location} target="_blank">{policy.location}</a></TableCell>
-                <TableCell>{policy.amount} ETH</TableCell>
-                <TableCell>{policy.duration} seconds</TableCell>
-                <TableCell>Cabernet Sauvignon</TableCell>
-                <TableCell>{policy.premium} ETH</TableCell>
-                <TableCell>{policy.active ? "Yes" : "No"}</TableCell>
-              </tr>
-            )
-          }) }
-        </tbody>
-      </table>
-    </>
+    <DashBoardFullPage>
+      <TableSpace>
+
+        <h1>Dashboard</h1>
+        <button onClick={() => handleUpdateState()}>Update State of all Contracts</button>
+        <hr />
+        <h2>Insurer Policies</h2>
+        <table border="1">
+          <thead>
+            <tr>
+              <TableHeader>Address</TableHeader>
+              <TableHeader>Location</TableHeader>
+              <TableHeader>Amount to cover</TableHeader>
+              <TableHeader>Duration</TableHeader>
+              <TableHeader>Grape Type</TableHeader>
+              <TableHeader>Premium</TableHeader>
+              <TableHeader>Active</TableHeader>
+            </tr>
+          </thead>
+          <tbody>
+            {insurerPolicies.map((policy, i) => {
+              return (
+                <tr key={i}>
+                  <TableCell><a href="#" onClick={() => navigate("/insure/" + policy.address)}>{policy.address}</a></TableCell>
+                  <TableCell><a href={ "https://www.google.com/maps/search/?api=1&query=" + policy.location} target="_blank">{policy.location}</a></TableCell>
+                  <TableCell>{policy.amount} ETH</TableCell>
+                  <TableCell>{policy.duration} seconds</TableCell>
+                  <TableCell>Cabernet Sauvignon</TableCell>
+                  <TableCell>{policy.premium} ETH</TableCell>
+                  <TableCell>{policy.active ? "Yes" : "No"}</TableCell>
+                </tr>
+              )
+            }) }
+          </tbody>
+        </table>
+        <hr />
+        <h2>Client Policies</h2>
+        <table border="1">
+          <thead>
+            <tr>
+              <TableHeader>Address</TableHeader>
+              <TableHeader>Location</TableHeader>
+              <TableHeader>Amount to cover</TableHeader>
+              <TableHeader>Duration</TableHeader>
+              <TableHeader>Grape Type</TableHeader>
+              <TableHeader>Premium</TableHeader>
+              <TableHeader>Active</TableHeader>
+            </tr>
+          </thead>
+          <tbody>
+            {clientPolicies.map((policy, i) => {
+              return (
+                <tr key={i}>
+                  <TableCell><a href="#" onClick={() => navigate("/insure/" + policy.address)}>{policy.address}</a></TableCell>
+                  <TableCell><a href={ "https://www.google.com/maps/search/?api=1&query=" + policy.location} target="_blank">{policy.location}</a></TableCell>
+                  <TableCell>{policy.amount} ETH</TableCell>
+                  <TableCell>{policy.duration} seconds</TableCell>
+                  <TableCell>Cabernet Sauvignon</TableCell>
+                  <TableCell>{policy.premium} ETH</TableCell>
+                  <TableCell>{policy.active ? "Yes" : "No"}</TableCell>
+                </tr>
+              )
+            }) }
+          </tbody>
+        </table>
+      </TableSpace>
+    </DashBoardFullPage>
   )
 }

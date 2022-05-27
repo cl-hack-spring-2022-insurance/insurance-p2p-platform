@@ -104,6 +104,15 @@ export function InsurePolicy(){
       }
   }
 
+  async function handleCheckForfeiture(){
+    const tx = await insurancePolicy.CheckForfeiture();
+    console.log(tx);
+    if (tx.hash !== null) {
+      alert("Checked forfeiture");
+      navigate("/dashboard");
+    }
+  }
+
 
   return (
     <>
@@ -134,6 +143,7 @@ export function InsurePolicy(){
           </fieldset>
         <FormField>
           <SubmitButton onClick={async() => await handlePayPremium()}>Pay Premium</SubmitButton>
+          <SubmitButton style={{marginLeft: "20px", width: "150px"}} onClick={async() => await handleCheckForfeiture()}>Check Forfeiture</SubmitButton>
         </FormField>
         </Form>
       </InsurePolicyPage>

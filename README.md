@@ -16,6 +16,19 @@ This repo is based on the [Chainlink Foundry Starter Kit](https://github.com/sma
 - [Thank You!](#thank-you)
   - [Resources](#resources)
 
+# How it works
+- We are using Accuweather Oracles to get current temperature for a given location. 
+The insurer deploys a new policy by inserting the relevant parameters like policy amount, client address, location .
+Then the insurer needs to call updateStatus() function every day and store the temperature under a basic set of rules. We only record the temperature if it is between march to september as its crucial season for wine owners. 
+- If the total temerature recorded between march to september exceeds 2700 C or it is below 2200 C , we will pay the wine owner ie client the damages by transferring the whole policy amount to the policy holder. 
+- If there is no claim and the policy has expired , we check if the insurer made calls to the oracle everyday , and then return his funds to him and the premium to the policholder.
+
+- But if the insurer failed to fulfill his job of calling the oracle everyday, we'll pay the policy holder twice the amount he paid as premium by deducting funds from the insurer's balance. This is like a penalty for negligence on the part of the insurer.
+
+- If the policy holder does not pay the premium on time, Anyone can call the forfeiture function and the entire balance of the contract (including premium ) will be sent to the insurer.(We can certainly add some forfeiture fees which will be given to the forfeiture function caller like what happens in liquidation).  
+
+
+
 # Installation
 
 ## Requirements
